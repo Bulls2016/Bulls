@@ -42,7 +42,7 @@ public class StudentUnitRecordManager {
 		}
 		throw new RuntimeException("DBMD: createStudent : student unit record not in file");
 	}
-
+// Get student Unit information from the table
 	public StudentUnitRecordList getRecordsByUnit(String unitCode) {
 		StudentUnitRecordList recs = ur.get(unitCode);
 		if (recs != null)
@@ -58,7 +58,7 @@ public class StudentUnitRecordManager {
 			ur.put(unitCode, recs); // be careful - this could be empty
 		return recs;
 	}
-
+//Get student information from the Database
 	public StudentUnitRecordList getRecordsByStudent(Integer studentID) {
 		StudentUnitRecordList recs = sr.get(studentID);
 		if (recs != null)
